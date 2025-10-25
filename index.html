@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz: Uso Consciente da Tecnologia</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    color: #333;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  }
+
+  h1 {
+    text-align: center;
+    color: #1e40af;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    margin-bottom: 25px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+
+  label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+  }
+
+  .result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .consciente { background-color: #bbf7d0; color: #065f46; border: 2px solid #10b981; }
+  .alerta { background-color: #fef9c3; color: #854d0e; border: 2px solid #fbbf24; }
+  .descontrolado { background-color: #fecaca; color: #7f1d1d; border: 2px solid #ef4444; }
+
+  .emoji {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>💡 Quiz: Você usa a tecnologia de forma consciente?</h1>
+
+<form id="quizForm">
+
+  <div class="question">
+    <p>⿡ Ao acordar, qual é a primeira coisa que você faz?</p>
+    <label><input type="radio" name="q1" value="1"> Levanto e me preparo para o dia antes de mexer no celular.</label>
+    <label><input type="radio" name="q1" value="2"> Dou uma olhadinha rápida nas notificações.</label>
+    <label><input type="radio" name="q1" value="3"> Pego o celular e passo um bom tempo nas redes sociais.</label>
+  </div>
+
+  <div class="question">
+    <p>⿢ Quanto tempo por dia você passa no celular ou computador fora do trabalho/escola?</p>
+    <label><input type="radio" name="q2" value="1"> Menos de 2 horas.</label>
+    <label><input type="radio" name="q2" value="2"> De 2 a 5 horas.</label>
+    <label><input type="radio" name="q2" value="3"> Mais de 5 horas.</label>
+  </div>
+
+  <div class="question">
+    <p>⿣ Você costuma checar o celular enquanto conversa com alguém pessoalmente?</p>
+    <label><input type="radio" name="q3" value="1"> Raramente, só se for urgente.</label>
+    <label><input type="radio" name="q3" value="2"> Às vezes, sem perceber.</label>
+    <label><input type="radio" name="q3" value="3"> Sim, quase sempre.</label>
+  </div>
+
+  <div class="question">
+    <p>⿤ Quando fica sem internet ou sem o celular, como se sente?</p>
+    <label><input type="radio" name="q4" value="1"> Tranquilo(a), aproveito para fazer outras coisas.</label>
+    <label><input type="radio" name="q4" value="2"> Um pouco incomodado(a), mas consigo lidar.</label>
+    <label><input type="radio" name="q4" value="3"> Ansioso(a) e irritado(a), não consigo relaxar.</label>
+  </div>
+
+  <div class="question">
+    <p>⿥ Você costuma usar o celular ou notebook antes de dormir?</p>
+    <label><input type="radio" name="q5" value="1"> Evito, pois sei que atrapalha o sono.</label>
+    <label><input type="radio" name="q5" value="2"> Às vezes, mas tento não exagerar.</label>
+    <label><input type="radio" name="q5" value="3"> Sempre, é a última coisa que faço.</label>
+  </div>
+
+  <div class="question">
+    <p>⿦ Quando está em um evento ou passeio, o que você faz?</p>
+    <label><input type="radio" name="q6" value="1"> Curto o momento e tiro poucas fotos.</label>
+    <label><input type="radio" name="q6" value="2"> Tiro várias fotos, mas tento aproveitar também.</label>
+    <label><input type="radio" name="q6" value="3"> Passo boa parte do tempo registrando tudo para postar.</label>
+  </div>
+
+  <div class="question">
+    <p>⿧ Você já deixou de fazer uma tarefa importante por estar no celular?</p>
+    <label><input type="radio" name="q7" value="1"> Nunca.</label>
+    <label><input type="radio" name="q7" value="2"> Algumas vezes.</label>
+    <label><input type="radio" name="q7" value="3"> Sim, com frequência.</label>
+  </div>
+
+  <div class="question">
+    <p>⿨ Você usa recursos como limite de tempo de tela ou modo foco?</p>
+    <label><input type="radio" name="q8" value="1"> Sim, e costumo respeitá-los.</label>
+    <label><input type="radio" name="q8" value="2"> Já tentei, mas acabo ignorando.</label>
+    <label><input type="radio" name="q8" value="3"> Não, nunca usei.</label>
+  </div>
+
+  <div class="buttons">
+    <button type="button" onclick="calcularResultado()">Ver resultado</button>
+    <button type="button" id="reiniciar" style="display:none;" onclick="reiniciarQuiz()">🔄 Reiniciar quiz</button>
+  </div>
+</form>
+
+<div id="resultado" class="result"></div>
+
+<div class="footer">
+  Criado por Théo Lorêdo Vieira e Kimberlly Pacheco 🤖 – Promovendo o uso consciente da tecnologia 💡
+</div>
+
+<script>
+function calcularResultado() {
+  const form = document.getElementById('quizForm');
+  const respostas = form.querySelectorAll('input[type="radio"]:checked');
+  
+  if (respostas.length < 8) {
+    alert("⚠ Por favor, responda todas as perguntas antes de ver o resultado.");
+    return;
+  }
+
+  let total = 0;
+  respostas.forEach(r => total += parseInt(r.value));
+
+  const resultadoDiv = document.getElementById('resultado');
+  let texto = "";
+  let classe = "";
+  let emoji = "";
+
+  if (total <= 11) {
+    texto = "<span class='emoji'>🌿😄</span><strong>Usuário Consciente!</strong><br>Você tem um ótimo equilíbrio no uso da tecnologia. Continue mantendo hábitos saudáveis!";
+    classe = "consciente";
+  } else if (total <= 18) {
+    texto = "<span class='emoji'>⚖😐</span><strong>Usuário em Alerta!</strong><br>Seu uso é moderado, mas pode estar começando a passar do ponto. Faça pausas e desconecte-se um pouco mais.";
+    classe = "alerta";
+  } else {
+    texto = "<span class='emoji'>🔥😵‍💫</span><strong>Usuário Descontrolado!</strong><br>A tecnologia está dominando seu tempo e atenção. Reflita sobre como pode retomar o controle do seu dia.";
+    classe = "descontrolado";
+  }
+
+  resultadoDiv.innerHTML = texto;
+  resultadoDiv.className = "result " + classe;
+
+  document.getElementById('reiniciar').style.display = 'inline-block';
+}
+
+function reiniciarQuiz() {
+  const form = document.getElementById('quizForm');
+  form.reset();
+  const resultadoDiv = document.getElementById('resultado');
+  resultadoDiv.innerHTML = "";
+  resultadoDiv.className = "result";
+  document.getElementById('reiniciar').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
